@@ -7,9 +7,11 @@ void delay_cyc( int cycles);
 // Main Function
 void main()
 {
+	int counter =0;
 	while(1)
 	{
-		printf("Hello World!\r\n")
+		counter ++;
+		printf("%d. Hello World!\r\n",counter);
 		delay_cyc(100);
 	}
 }
@@ -18,7 +20,9 @@ void main()
 void delay_cyc ( int cycles) 
 	{
 		while(--cycles)
-			for(int i =0; i<1000; i++)
+		{	int i =0;
+			for(i =0; i<1000; i++)
 				asm("nop");
+		}
 	}
 
