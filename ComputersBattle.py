@@ -1,4 +1,12 @@
-#hello world test for GitHub
+#Computer`s Battle Session has just began
+#Prepare your machines for a crucial Test
+#The test is : Who can count faster through 100 000 
+# for this you must run this file from your Terminal ( Linux ), or 
+# CommandPromt ( run->cmd - in Windows) with:
+# "python ComputersBattle.py" 
+# *i`ll supose that you`re already in the folder cloned from GitHub
+
+# GOOD Luck!
 
 import time
 
