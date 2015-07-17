@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1437054990 source:d:\eduardsoltuzu\workspacetests\codeblocks\test1_enet\main.cpp
+	<iostream>
+	<string>
+	<stdio.h>
+
