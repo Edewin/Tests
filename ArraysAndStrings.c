@@ -4,31 +4,32 @@
  Author      : Eduard Soltuzu
  Version     :
  Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Description : Arrays&Strings in C, Ansi-style
  ============================================================================
  */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <string.h>
 
 
-typedef uint u8;
+typedef u_int8_t u8;
 
 u8 buffer[13]={1,3,8,0,0,0,0,0,3,0x88,0xe2,131,158};
 
 int main(void)
 {
+	/*
+	Short Version -- Alin Micu contributed
+	*/
+	uint32_t data2 = (buffer[7] << 24) | (buffer[8]<<16) | (buffer[9]<<8) | buffer[10];
+    uint8_t i=0;
+    printf("data = %d\n\r",data2);
 
-
-    int i;
-
-    for(i=0;i<13;i++)
-    {
-
-        printf("buffer[%d]=%x\r\n",i,buffer[i]);
-
-    }
+    /*
+    	Long Version
+    */
 
     int buf[4];
     buf[0] = buffer[7];
@@ -37,7 +38,7 @@ int main(void)
     buf[3] = buffer[10];
 
 
-    long int data =0;
+    int data =0;
 
     char myS[20];
     char myS1[4];
@@ -70,11 +71,10 @@ int main(void)
         strcat(myS, myS3);
         strcat(myS, myS4);
 
-        char* pEnd;
         printf("\n\r*******Result*********\n\r");
         printf("myS = \"%s\"(string hex)\r\n",myS);
 
-        data = strtol(myS,&pEnd,16); //convert string to long int
+        data = strtol(myS,NULL,16); //convert string to long int
 
         printf("data = %d (long int)\r\n",data);
         printf("********************\n\r");
