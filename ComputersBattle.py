@@ -21,7 +21,7 @@ while True:
     counter += 1
     if counter == 100000 :
         end_time = time.time() - start_time
-        my_record = 12.037
+        my_record = 7.814
         print "\nFinished in: %.3f seconds" % (end_time)
         if my_record < end_time :
             print "Seems that my computer is still faster than yours!"
